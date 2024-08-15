@@ -1,0 +1,25 @@
+{% extends "www/base.html" %}
+
+
+
+{% block title %}Zestawienie wydziałów{% endblock %}
+
+
+
+{% block content %}
+
+    <h2>Wydziały</h2>
+
+    {% for wydzial in wydzialy %}
+
+    
+
+    <h5><a href="{% url 'detail-wydzial' pk=wydzial.pk %}">{{wydzial.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+
+
+{% endblock %}

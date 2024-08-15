@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studenci</title>
+</head>
+<body>
+    <h2>{{ student.imie }} {{ student.nazwisko }}</h2>
+    <img width="300" src="{{ student.zdjecie.url }}" alt="">
+    <hr>
+    {% for kierunek in student.kierunki.all %}
+        <a href="{% url 'detail-kierunek' pk=kierunek.id %}"><p>{{ kierunek.nazwa }}</p></a>
+    {% endfor %}
+</body>
+</html>

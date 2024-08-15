@@ -1,0 +1,25 @@
+{% extends "www/base.html" %}
+
+
+
+{% block title %}Zestawienie kierunków{% endblock %}
+
+
+
+{% block content %}
+
+    <h2>Kierunki</h2>
+
+    {% for kierunek in kierunki %}
+
+    
+
+    <h5><a href="{% url 'detail-kierunek' pk=kierunek.pk %}">{{kierunek.nazwa}}</a></h5>
+
+    
+
+    {% endfor %}
+
+
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'www/base.html' %}
+
+
+
+{% block title %}Dodaj Kierunek{% endblock %}
+
+
+
+{% block content %}
+
+<form class="form-control" method="POST">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Zapisz</button>
+
+</form>
+
+
+
+{% endblock %}

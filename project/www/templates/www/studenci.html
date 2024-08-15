@@ -1,0 +1,25 @@
+{% extends "www/base.html" %}
+
+
+
+{% block title %}Zestawienie studentów{% endblock %}
+
+
+
+{% block content %}
+
+    <h2>Studenci</h2>
+
+    {% for student in studenci %}
+
+    
+
+    <h5><a href="{% url 'detail-student' pk=student.pk %}">{{student.imie}} {{student.nazwisko}}, numer albumu: {{student.nr_albumu}}, email: {{ student.email }}</a></h5>
+
+    
+
+    {% endfor %}
+
+
+
+{% endblock %}

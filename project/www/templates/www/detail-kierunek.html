@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kierunki</title>
+</head>
+<body>
+    <h2>{{ kierunek.nazwa }}</h2>
+    <hr>
+    {% for wydzial in kierunek.wydzialy.all %}
+        <a href="{% url 'detail-wydzial' pk=wydzial.id %}"><p>{{ wydzial.nazwa }}</p></a>
+    {% endfor %}
+</body>
+</html>
